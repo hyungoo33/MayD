@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qps.mayd">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Controllers.ConnectActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".Controllers.MainActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Controllers.ConnectActivity"/>
+
+
+        <activity android:name=".Controllers.ReglagesActivity"
+            android:screenOrientation="portrait"
+            android:label ="Réglages"
+            android:parentActivityName=".Controllers.MainActivity"/>
+        <activity android:name=".Controllers.CarteActivity"
+            android:screenOrientation="portrait"
+            android:label="Carte"
+            android:parentActivityName=".Controllers.MainActivity"/>
+        <activity android:name=".Controllers.GestesActivity"
+            android:screenOrientation="portrait"
+            android:label="Gestes qui sauvent"
+            android:parentActivityName=".Controllers.MainActivity"/>
+        <activity android:name=".Controllers.GroupsActivity"
+            android:screenOrientation="portrait"
+            android:label="Groupes"
+            android:parentActivityName=".Controllers.MainActivity"/>
+        <activity android:name=".Controllers.ProfilActivity"
+            android:screenOrientation="portrait"
+            android:label="Profil"
+            android:parentActivityName=".Controllers.MainActivity"/>
+        <activity android:name=".Controllers.CreateUserActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Controllers.ConnectActivity" />
+        <activity android:name=".Controllers.ModifyUserActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Controllers.ProfilActivity" />
+    </application>
+
+</manifest>
